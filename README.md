@@ -3,24 +3,24 @@ All my Infocom discoveries and learning... CPM, Zork and beyond!
 
 
 ## What Do We Have Here Then?
-I am interested in CPM, Infocom and, of-course, Zork!
+I am interested in CPM, Infocom and, of-course, Zork! Did I mention Zork? I love Zork!
 
-Zork, and all the Infocom gaves consist of an interpreter and a game data file. The interpreters understand Z-Code, and the game files are some version of Z-Code.
+Zork, and all the Infocom games consist of an interpreter and a game data file. The interpreters understand Z-Code, and the game files are written in some version of Z-Code.
 
 So far I have worked only with an interpreter that definitely understands Z-Code v3 (z3) game files.
 
-And before I forget, I have snagged everything from here:
+And before I forget, I have snagged everything from this amazing site:
 * https://eblong.com/infocom/
 
 
 ## What Have I Done?
 Not much, but it has been interesting and fun, and all with runCPM v6.7 (64bit) on Windows 10!
 
-* I have taken the CPM Z80 Z-Code interperter and successfully assembled it with Z80ASM.
-* Fixed a few issues with the Z80 code to allow a clean assemble.
-* Got the Z-Code interpreter working with a Zork1 (common R88 z3) data file.
-* Fixed some text display issues changing some Wyse terminal codes for ANSI control codes.
-* Worked through the entire assembly file standardising the formating and layout (to my liking).
+* I have taken the CPM Z80 Z-Code interpreter and successfully assembled it with Z80ASM v1.32.
+* Fixed a few issues with the original Z80 code to allow a clean assemble.
+* Got the Z-Code interpreter working with a common Zork1 (R88 z3) data file.
+* Fixed some text display issues, replacing some Wyse terminal codes for VT100/ANSI control codes.
+* Worked through the entire Z80 Z-Code interpreter assembly file standardising the formatting and layout (to my liking).
 
 
 ## What's Next?
