@@ -24,16 +24,16 @@ Not much, but it has been interesting and fun, and all with RunCPM v6.7 (64bit) 
 * Continued working through the Z80 Z-Code interpreter assembly file standardising the formatting...
 
 
+## Whats In This Repo?
+* Original files and tool that I pulled together to allow me to do this.
+* Reformatted Z80 Z-Code interpreter assembly file for RunCPM (ZORKRCPM.Z80).
+* Successfully assembled a Zork 1 executable for RunCPM (ZORKRCPM.COM).
+
+
 ## What's Next?
 * More examination of the CPM Z80 Z-Code interpreter code.
 * Try the assembled Zork1 code on my RC2040.
 * Re-assemble the CPM Z80 Z-Code interpreter code for Zork 2, 3 and more.
-
-
-## Whats In This Repo?
-* Original files and tool that I pulled together to allow me to do this.
-* Reformatted Z80 Z-Code interpreter assembly file for RunCPM (ZORKRCPM.Z80).
-* Successfully assembled Zork 1 executible for RunCPM (ZORKRCPM.COM).
 
 
 ## Other Comments...
