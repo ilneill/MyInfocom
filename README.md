@@ -14,13 +14,14 @@ And before I forget, I have snagged everything from this amazing site:
 
 
 ## What Have I Done?
-Not much, but it has been interesting and fun, and all with runCPM v6.7 (64bit) on Windows 10!
+Not much, but it has been interesting and fun, and all with RunCPM v6.7 (64bit) on Windows 10!
 
 * I have taken the CPM Z80 Z-Code interpreter and successfully assembled it with Z80ASM v1.32.
 * Fixed a few issues with the original Z80 code to allow a clean assemble.
 * Got the Z-Code interpreter working with a common Zork1 (R88 z3) data file.
 * Fixed some text display issues, replacing some Wyse terminal codes for VT100/ANSI control codes.
 * Worked through the entire Z80 Z-Code interpreter assembly file standardising the formatting and layout (to my liking).
+* Continued working through the Z80 Z-Code interpreter assembly file standardising the formatting...
 
 
 ## What's Next?
@@ -29,8 +30,14 @@ Not much, but it has been interesting and fun, and all with runCPM v6.7 (64bit) 
 * Re-assemble the CPM Z80 Z-Code interpreter code for Zork 2, 3 and more.
 
 
+## Whats In This Repo?
+* Original files and tool that I pulled together to allow me to do this.
+* Reformatted Z80 Z-Code interpreter assembly file for RunCPM (ZORKRCPM.Z80).
+* Successfully assembled Zork 1 executible for RunCPM (ZORKRCPM.COM).
+
+
 ## Other Comments...
-I really like runCPM!
+I really like RunCPM!
 * https://github.com/MockbaTheBorg/RunCPM/
 * https://github.com/guidol70/RunCPM_Windows
 
