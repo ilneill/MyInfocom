@@ -27,7 +27,9 @@ Not much, but it has been interesting and fun, and all with RunCPM v6.7 (64bit) 
 ## Whats In This Repo?
 * Original files and tool that I pulled together to allow me to do this.
 * Reformatted Z80 Z-Code interpreter assembly file for RunCPM (ZORKRCPM.Z80).
-* Successfully assembled a Zork 1 executable for RunCPM (ZORKRCPM.COM).
+* A successfully assembled Zork 1 executable for RunCPM (ZORKRCPM.COM).
+
+![Zork 1 in RunCPM](images/ZORK1CPM.jpg)
 
 
 ## What's Next?
