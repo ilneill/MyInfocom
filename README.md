@@ -27,8 +27,8 @@ Not much, but it has been interesting and fun, and all with RunCPM v6.7 (64bit) 
 I wanted to get RunCPM and Zork running on Linux, and I did!
 
 * First, I needed a lightweight Linux distribution, and I went through a few before I found one that would install and perform well enough on the very old hardware I have, and was not hard core! I have found settled on Bodhi Linux, and I really like it. Get it here: https://www.bodhilinux.com/
-* Then I needed to build the RunCPM executable. I found that GCC works out of the box on Bodhi Linux, so after cloning the GitHub repo and using 'make posix build' I had an executable that I could put in a folder of its own.
-* Finally, I needed a few drives for RunCPM. The repo has the A drive, and I created a G drive and a User 0 for the Zork1 I assembled before.
+* Then I needed to build the RunCPM executable. I found that GCC works out of the box with Bodhi Linux, so after cloning the GitHub repo and using 'make posix build' I had an executable that I could put in a folder of its own.
+* Finally, I needed a few drives for RunCPM. The repo has the A drive, and I created a G drive and a User 0 for the Zork 1 I assembled before.
 * And it just worked! Into the dungeon I must now go...
 
 
@@ -56,6 +56,9 @@ The CPM text editor TE is just excellent.
 
 The CPM Z80 assembler Z80ASM is fantastic.
 * https://github.com/JosVermoesen/Z80/tree/master/ASM/Z80ASM
+
+The Humongous CPM Archive is now my goto for CPM anything!
+* http://cpmarchives.classiccmp.org/
 
 
 __Enjoy!__
