@@ -54,13 +54,14 @@ Or so I thought... I noticed that the reverse text banner that the game puts at 
 
 And indeed I had:
 
-__CPMINV: DB 80H                 ;NUMBER ADDED TO CHARACTERS FOR INVERSE VIDEO__
+`CPMINV: DB 80H                 ;NUMBER ADDED TO CHARACTERS FOR INVERSE VIDEO`
 
 This quickly became - see the "ZORKPCPM.Z80" file in the repo:
-;ORIGINAL WYSE CODES
-;CPMINV: DB 80H                 ;NUMBER ADDED TO CHARACTERS FOR INVERSE VIDEO
-;ALTERNATIVE VT100/ANSI CODES
-CPMINV: DB 00H                  ;NUMBER ADDED TO CHARACTERS FOR INVERSE VIDEO
+
+`;ORIGINAL WYSE CODES`
+`;CPMINV: DB 80H                 ;NUMBER ADDED TO CHARACTERS FOR INVERSE VIDEO`
+`;ALTERNATIVE VT100/ANSI CODES`
+`CPMINV: DB 00H                  ;NUMBER ADDED TO CHARACTERS FOR INVERSE VIDEO`
 
 Then I assembled the Z-Code interpreter again, in RunCPM on the Pico, creating the "ZORKPCPM.COM" file in the repo. Problem solved.
 
@@ -99,7 +100,10 @@ The CPM Z80 assembler Z80ASM is fantastic.
 The Humongous CPM Archive is now my first goto for CPM anything!
 * http://cpmarchives.classiccmp.org/
 
+And the **GOTO** Guide for Markdown Syntax:
+* https://www.markdownguide.org/cheat-sheet/
 
-__Enjoy!__
+
+*Enjoy!*
 
 ;EOF
