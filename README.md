@@ -79,8 +79,6 @@ Then I assembled the Z-Code interpreter again, in RunCPM on the Pico, creating t
 
 ## What's Next?
 * More examination of the CPM Z80 Z-Code interpreter code.
-* Try the assembled Zork 1 code on my RC2040.
-* Get RunCPM and Zork running on a Raspberry Pi Pico.
 * Re-assemble the CPM Z80 Z-Code interpreter code for Zork 2, 3 and more.
 * I want to play with the different CCPs that come with RunCPM.
 
