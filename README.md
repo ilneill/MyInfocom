@@ -35,13 +35,45 @@ I found getting RunCPM and Zork 1 running on Bodhi Linux to be much, much, easie
 
 If you are interested, I find that Bodhi v7.0.0 (64bit, yes, I know) on this Toshiba NB505 Netbook (2GB RAM, 128GB SSD, 1024x600 screen) is fantastic. It just works, and it flies! 
 
+### And, While I Am Here...
+I also wanted to get RunCPM and Zork running on an RP2040 Pi Pico... and that happened too!
+
+#### Pico Hardware
+I got a plain RP2040 Pi Pico, no WiFi and no legs...
+
+* I soldered legs to the Pico and put it into a mini breakout board.
+* Using a few Dupont cables, I connected a micro SD card module and a KY-004 reset switch to the Pico.
+
+![Pi Pico Hareware Connections](images/RunCPM_Pico_Connections.jpg)
+![Pi Pico Hardware for RunCPM](images/RP2040CPM.jpg)
+
+#### Pico Software
+Using the UF2 file and the A: files in the guidol70 repo, I quickly got RunCPM going on the Pico, connecting to it with PuTTY from my Bodhi Linux build. I then copied over the Zork 1 COM and DAT file into an H: drive (a folder on the micro SD card) I created, and tht just worked too.
+
+Or so I thought... I noticed that the reverse text banner that the game puts at the top of the screen was not displaying correctly. Using PuTTY I captured the text that was being sent by the game and when I looked at it with a hex editor, I could see the the banner text characters all had the MSB (bit 7) set. Ah-ha, I thought, that rings a bell! I thought Iremembered seeing something related to that when I was reformating the Z80 assembly code for the Z-Code interperator.
+
+And indeed I had:
+
+__CPMINV: DB 80H                 ;NUMBER ADDED TO CHARACTERS FOR INVERSE VIDEO__
+
+This quickly became - see the "ZORKPCPM.Z80" file in the repo:
+;ORIGINAL WYSE CODES
+;CPMINV: DB 80H                 ;NUMBER ADDED TO CHARACTERS FOR INVERSE VIDEO
+;ALTERNATIVE VT100/ANSI CODES
+CPMINV: DB 00H                  ;NUMBER ADDED TO CHARACTERS FOR INVERSE VIDEO
+
+Then I assembled the Z-Code interpreter again, in RunCPM on the Pico, creating the "ZORKPCPM.COM" file in the repo. Problem solved.
+
+
 ## Whats In This Repo?
 * Original files and tool that I pulled together to allow me to do this.
-* Reformatted Z80 Z-Code interpreter assembly file for RunCPM (ZORKRCPM.Z80).
-* A successfully assembled Zork 1 executable for RunCPM (ZORKRCPM.COM).
+* Reformatted Z80 Z-Code interpreter assembly file for RunCPM (ZORKRCPM.Z80) that works in RunCPM on Linux.
+* A slightly tweaked Z80 Z-Code interpreter assembly file for RunCPM (ZORKPCPM.Z80) that works in RunCPM on a Pico.
+* A successfully assembled Zork 1 executable for RunCPM (ZORKRCPM.COM & ZORKPCPM.COM).
 * Some useful links to CPM and Zork goodness!
 
-![Zork 1 in RunCPM](images/ZORK1CPM.jpg)
+![Zork 1 in RunCPM - PC](images/ZORK1CPM-1.jpg)
+![Zork 1 in RunCPM - Pico](images/ZORK1CPM-2.jpg)
 
 
 ## What's Next?
