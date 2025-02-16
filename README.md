@@ -58,13 +58,10 @@ And indeed I had:
 
 This quickly became - see the "ZORKPCPM.Z80" file in the repo:
 
-`;ORIGINAL WYSE CODES`
-
-`;CPMINV: DB 80H                 ;NUMBER ADDED TO CHARACTERS FOR INVERSE VIDEO`
-
-`;ALTERNATIVE VT100/ANSI CODES`
-
-`CPMINV: DB 00H                  ;NUMBER ADDED TO CHARACTERS FOR INVERSE VIDEO`
+`;ORIGINAL WYSE CODES`  
+`;CPMINV: DB 80H                 ;NUMBER ADDED TO CHARACTERS FOR INVERSE VIDEO`  
+`;ALTERNATIVE VT100/ANSI CODES`  
+`CPMINV: DB 00H                  ;NUMBER ADDED TO CHARACTERS FOR INVERSE VIDEO`  
 
 Then I assembled the Z-Code interpreter again, in RunCPM on the Pico, creating the "ZORKPCPM.COM" file in the repo. Problem solved.
 
