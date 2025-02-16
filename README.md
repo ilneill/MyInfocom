@@ -50,7 +50,7 @@ I got a plain RP2040 Pi Pico, no WiFi and no legs...
 #### Pico Software
 Using the UF2 file and the A: files in the guidol70 repo, I quickly got RunCPM going on the Pico, connecting to it with PuTTY from my Bodhi Linux build. I then copied over the Zork 1 COM and DAT file into an H: drive (a folder on the micro SD card) I created, and tht just worked too.
 
-Or so I thought... I noticed that the reverse text banner that the game puts at the top of the screen was not displaying correctly. Using PuTTY I captured the text that was being sent by the game and when I looked at it with a hex editor, I could see the the banner text characters all had the MSB (bit 7) set. Ah-ha, I thought, that rings a bell! I thought Iremembered seeing something related to that when I was reformating the Z80 assembly code for the Z-Code interperator.
+Or so I thought... I noticed that the reverse text banner that the game puts at the top of the screen was not displaying correctly. Using PuTTY I captured the text that was being sent by the game and when I looked at it with a hex editor, I could see the the banner text characters all had the MSB (bit 7) set. Ah-ha, I thought, that rings a bell! I thought I remembered seeing something related to that when I was reformating the Z80 assembly code for the Z-Code interperator.
 
 And indeed I had:
 
@@ -59,8 +59,11 @@ And indeed I had:
 This quickly became - see the "ZORKPCPM.Z80" file in the repo:
 
 `;ORIGINAL WYSE CODES`
+
 `;CPMINV: DB 80H                 ;NUMBER ADDED TO CHARACTERS FOR INVERSE VIDEO`
+
 `;ALTERNATIVE VT100/ANSI CODES`
+
 `CPMINV: DB 00H                  ;NUMBER ADDED TO CHARACTERS FOR INVERSE VIDEO`
 
 Then I assembled the Z-Code interpreter again, in RunCPM on the Pico, creating the "ZORKPCPM.COM" file in the repo. Problem solved.
